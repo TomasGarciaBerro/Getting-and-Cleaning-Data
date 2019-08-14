@@ -62,4 +62,4 @@ dt_melted <- melt(dt_filtered,id = c("subject","activityName"),measure.vars = na
 dt_tidy <- dcast(dt_melted,subject + activityName ~ variable, mean)
 
 # Write the tidy data set into a tab delimited file
-write.table(dt_tidy, file="tidydata.txt", row.name=FALSE, sep = "\t")
+write.table(dt_tidy, file="tidydata.txt", row.name=FALSE)
